@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Smartphone, Mail, Globe } from 'lucide-react';
 import type { Language } from '../App';
+import logo from "../assets/LOGO_MYSaathi.png";
+
 
 interface WelcomeProps {
   onLogin: (language: Language) => void;
@@ -18,7 +20,12 @@ export function Welcome({ onLogin }: WelcomeProps) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 max-w-md mx-auto">
       <div className="text-center mb-12">
-        <div className="text-6xl mb-4">🤝</div>
+      <img
+  src={logo}
+  alt="MySaathi Logo"
+  className="h-32 w-32 mb-4 mx-auto"
+  />
+
         <h1 className="text-4xl font-bold text-[#FF9933] mb-2">MySaathi</h1>
         <p className="text-lg text-[#2C3E50]">Your Learning Companion</p>
       </div>
